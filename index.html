@@ -1,35 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="main-info">
-        <h1>Welcome to My Portfolio!</h1>
-        <img src="images.jpg" style="margin: 50px" align="left" />
-        <div style="margin-top: 70px;">
-          <strong><em>Software Developer</em></strong>
-        </div>
-        <br />
-        Şeyma Çelebi
-      </div>
-      <div style="margin-top: 60px;">
-        <div>
-          <h3>Work Experience</h3>
-          <p>Description of Project 1 goes here...</p>
-        </div>
-        <div>
-          <h3>Education</h3>
-          <p>Description of Project 2 goes here...</p>
-        </div>
-       
-      </div>
+<head>
+  <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+
+    nav {
+      float: left;
+      width: 30%;
+      height: auto;
+      background: #ccc;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      background-color: #f1f1f1;
+      height: auto;
+    }
+
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Welcome to My Portfolio!</h2>
+</header>
+
+<section>
+  <nav>
+    <img src="images.jpg" style="margin: 50px" align="left" />
+    <div style="margin-top: 70px;">
+      <strong><em>Software Developer</em></strong>
     </div>
-    <footer>
-      <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-    </footer>
-  </body>
+    <br />
+    Şeyma Çelebi
+  </nav>
+  
+  <article>
+    <div>
+      <h3>Work Experience</h3>
+      <p>Description of Project 1 goes here...</p>
+    </div>
+    <div>
+      <h3>Education</h3>
+      <p>Description of Project 2 goes here...</p>
+    </div>
+  </article>
+</section>
+
+<footer>
+  <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+</footer>
+
+</body>
 </html>
