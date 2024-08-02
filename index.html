@@ -4,6 +4,10 @@
   <title>My Portfolio</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
@@ -66,18 +70,34 @@
 <body>
 
 <header>
- <a href=""></a>
- <span>Şeyma Çelebi</span>
- <nav class="navbar">
-  <a href="#home" class="active">Home</a>
-  <a href="#education" class="active">Education</a>
-  <a href="#contact" class="active">Contact</a>
- </nav>
+  <a href=""></a>
+  <span>Şeyma Çelebi</span>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
 
 <section>
   <nav>
-    <img src="images.jpg" style="margin: 50px" align="left" />
+    <img src="images.jpg" class="img-fluid" style="margin: 50px" align="left" />
     <div style="margin-top: 70px;">
       <strong><em>Software Developer</em></strong>
     </div>
@@ -99,10 +119,15 @@
     </div>
   </div>
 </section>
+<button type="button" class="btn btn-primary">Buton</button>
 
 <footer>
   <p>&copy; 2024 My Portfolio. All rights reserved.</p>
 </footer>
-<script src="style.css"></script>
+
+<!-- Bootstrap JS, Popper.js ve jQuery -->
+<script src="js/jquery-3.5.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
