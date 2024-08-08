@@ -360,6 +360,15 @@ section {
 .contact form .textarea-field textarea::placeholder{
   color: var(--text-color); 
 }
+.contact form .focus{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: .6rem;
+}
+
 .contact form .textarea-field{
   position: relative;
   margin: .8rem 0 2.7rem;
@@ -371,14 +380,29 @@ section {
 .contact form .btn-box.btns .btn{
   cursor: pointer;
 }
-.contact form .focus{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap:wrap;
+  padding: 2rem 9%;
+  background-color: var(--second-bg-color);
+}
+.footer text p{
+  font-size: 1.6em;
+
+}
+footer-iconTop a{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: .8rem;
+  background: var(--main-color);
+  border: .2rem solid var(--main-color);
   border-radius: .6rem;
 }
+
 /* .education-column .education-box{
     border-left: .2rem solid var(--main-color);
 } */
