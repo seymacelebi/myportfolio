@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -65,6 +65,13 @@
       </div>
       <div class="more-button">
         <a href="#" class="btn-more">Read More</a>
+      </div>
+      <div class="more-button">
+        <h2>Yaş Hesaplayıcı</h2>
+        <label for="birthYear">Doğum Yılınız:</label>
+        <input type="number" id="birthYear" placeholder="YYYY" />
+        <button onclick="calculateAge()">Yaşını Hesapla</button>
+        <p id="result"></p>
       </div>
     </section>
     <!-- education -->
@@ -214,44 +221,52 @@
       </div>
     </section>
     <!-- contact section -->
-     <section class="contact" id="contact">
+    <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
       <form action="#">
         <div class="input-box">
           <div class="input-field">
-            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Full Name" required />
             <span class="focus"></span>
           </div>
           <div class="input-field">
-            <input type="text" placeholder="Email Address" required>
+            <input type="text" placeholder="Email Address" required />
             <span class="focus"></span>
           </div>
           <div class="input-field">
-            <input type="text" placeholder="Phone Number" required>
+            <input type="text" placeholder="Phone Number" required />
             <span class="focus"></span>
           </div>
           <div class="input-field">
-            <input type="text" placeholder="Email Subject" required>
+            <input type="text" placeholder="Email Subject" required />
             <span class="focus"></span>
           </div>
         </div>
         <div class="textarea-field">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+            required
+          ></textarea>
           <span class="focus"></span>
         </div>
         <div class="btn-box btns">
           <button type="submit" class="btn">Submit</button>
         </div>
       </form>
-     </section>
-     <!-- footer -->
-      <footer class="footer">
-        <div class="footer-text">
-          <p>Copyright &copy; 2024 by Seyma | All Rights Reserved. </p>
-        </div>
-        <div class="footer-iconTop">
-          <a href="#"></a>
-        </div>
-      </footer>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024 by Seyma | All Rights Reserved.</p>
+      </div>
+      <div class="footer-iconTop">
+        <a href="#"></a>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

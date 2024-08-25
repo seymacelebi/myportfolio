@@ -9,8 +9,8 @@
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 :root {
-  --bg-color: #402f6d; /* Gri arka plan rengi */
-  --second-bg-color: rgba(
+  --bg-color: #081b29; /* Gri arka plan rengi */
+  --second-bg-color: #112e42(
     64,
     47,
     109,
@@ -82,7 +82,19 @@ body {
 }
 
 a[href="#home"]:hover {
-  color: red;
+  color: blue;
+}
+a[href="#about"]:hover {
+  color: blue;
+}
+a[href="#education"]:hover {
+  color: blue;
+}
+a[href="#skills"]:hover {
+  color: blue;
+}
+a[href="#contact"]:hover {
+  color: blue;
 }
 
 #menu-icon {
