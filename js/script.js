@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('button').onclick = calculateAge;
 });
 
+let menuIcon = document.querySelector('menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menuIcon.onclick = () =>{
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+
 let section = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -40,3 +48,31 @@ window.onscroll = () => {
 
     header.classList.toggle('sticky', window.scrollY > 100);
 }
+
+const skillsData = [
+    { skill: 'HTML', level: 90 },
+    { skill: 'CSS', level: 85 },
+    { skill: 'JavaScript', level: 75 },
+    { skill: 'React', level: 70 }
+  ];
+  
+  const professionalSkillsData = [
+    { skill: 'Communication', level: 80 },
+    { skill: 'Teamwork', level: 85 },
+    { skill: 'Problem Solving', level: 75 },
+    { skill: 'Creativity', level: 80 }
+  ];
+  
+  const codingSkillsContent = document.querySelectorAll('.skills-column:nth-child(1) .progress');
+  const professionalSkillsContent = document.querySelectorAll('.skills-column:nth-child(2) .progress');
+
+  skillsData.forEach((item, index) => {
+    codingSkillsContent[index].querySelector('h3 span').textContent = `${item.level}%`;
+    codingSkillsContent[index].querySelector('.bar span').style.width = `${item.level}%`;
+  });
+
+
+  professionalSkillsData.forEach((item, index) => {
+    professionalSkillsContent[index].querySelector('h3 span').textContent = `${item.level}%`;
+    professionalSkillsContent[index].querySelector('.bar span').style.width = `${item.level}%`;
+  });
