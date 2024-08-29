@@ -49,30 +49,40 @@ window.onscroll = () => {
     header.classList.toggle('sticky', window.scrollY > 100);
 }
 
-const skillsData = [
-    { skill: 'HTML', level: 90 },
-    { skill: 'CSS', level: 85 },
-    { skill: 'JavaScript', level: 75 },
-    { skill: 'React', level: 70 }
-  ];
+document.addEventListener("DOMContentLoaded", () => {
+    // Veriler
+    const codingSkills = [
+      { name: "HTML", level: "90%" },
+      { name: "CSS", level: "85%" },
+      { name: "JavaScript", level: "80%" },
+      { name: "C#", level: "70%" },
+    ];
   
-  const professionalSkillsData = [
-    { skill: 'Communication', level: 80 },
-    { skill: 'Teamwork', level: 85 },
-    { skill: 'Problem Solving', level: 75 },
-    { skill: 'Creativity', level: 80 }
-  ];
+    const professionalSkills = [
+      { name: "Communication", level: "85%" },
+      { name: "Teamwork", level: "80%" },
+      { name: "Problem-solving", level: "75%" },
+      { name: "Time Management", level: "80%" },
+    ];
   
-  const codingSkillsContent = document.querySelectorAll('.skills-column:nth-child(1) .progress');
-  const professionalSkillsContent = document.querySelectorAll('.skills-column:nth-child(2) .progress');
-
-  skillsData.forEach((item, index) => {
-    codingSkillsContent[index].querySelector('h3 span').textContent = `${item.level}%`;
-    codingSkillsContent[index].querySelector('.bar span').style.width = `${item.level}%`;
+    // HTML şablonu oluşturma fonksiyonu
+    function createSkillHTML(skill) {
+      return `
+        <div class="progress">
+          <h3>${skill.name} <span>${skill.level}</span></h3>
+          <div class="bar"><span style="width: ${skill.level};"></span></div>
+        </div>
+      `;
+    }
+  
+    // Verileri HTML'e ekleme
+    function populateSkills(skills, containerId) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = skills.map(createSkillHTML).join("");
+    }
+  
+    // Verileri doldurma
+    populateSkills(codingSkills, "coding-skills-content");
+    populateSkills(professionalSkills, "professional-skills-content");
   });
-
-
-  professionalSkillsData.forEach((item, index) => {
-    professionalSkillsContent[index].querySelector('h3 span').textContent = `${item.level}%`;
-    professionalSkillsContent[index].querySelector('.bar span').style.width = `${item.level}%`;
-  });
+  
