@@ -1,27 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    function calculateAge() {
-        const birthYear = document.getElementById('birthYear').value;
-        const currentYear = new Date().getFullYear();
-        const age = currentYear - birthYear;
-
-        if(birthYear && age >= 0) {
-            document.getElementById('result').innerHTML = `Yaşınız: ${age}`;
-        } else {
-            document.getElementById('result').innerHTML = 'Geçerli bir doğum yılı giriniz.';
-        }
-    }
-
-    // calculateAge fonksiyonunu buton click eventine bağlayın
-    document.querySelector('button').onclick = calculateAge;
+   
 });
 
 let menuIcon = document.querySelector('menu-icon');
 let navbar = document.querySelector('.navbar');
 
-menuIcon.onclick = () =>{
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
+// menuIcon.onclick = () =>{
+//     menuIcon.classList.toggle('bx-x');
+//     navbar.classList.toggle('active');
+// }
 
 let section = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -48,6 +35,7 @@ window.onscroll = () => {
 
     header.classList.toggle('sticky', window.scrollY > 100);
 }
+// skills part ja kodu
 
 document.addEventListener("DOMContentLoaded", () => {
     // Veriler
@@ -86,3 +74,37 @@ document.addEventListener("DOMContentLoaded", () => {
     populateSkills(professionalSkills, "professional-skills-content");
   });
   
+  // contact form js code
+    document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+
+        // Get the values from the form fields
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        // Save data to localStorage (optional)
+        const formData = {
+            name: name,
+            email: email,
+            phone: phone,
+            subject: subject,
+            message: message
+        };
+        localStorage.setItem('contactFormData', JSON.stringify(formData));
+
+        // Log the form data (for debugging)
+        console.log('Form Submitted:', formData);
+
+        // Clear the form after submission
+        form.reset();
+
+        // You can also display a success message to the user
+        alert("Thank you for your message! We'll get back to you soon.");
+    });
+});
